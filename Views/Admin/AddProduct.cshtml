@@ -1,0 +1,56 @@
+@{
+    ViewBag.Title = "AddProduct";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@model NewViews.Models.Product
+
+      
+   <div class="center_content">
+       
+   <h2>Add New Item</h2>
+<form action="/Admin/AddProductDB" method="post" enctype="multipart/form-data">
+
+      <table width="500" border="0">
+  <tr>
+      <tr>
+    <th width="153" height="50" scope="row">      <h3>Upload Image</h3></th>
+    <td width="252" height="50" ><input type="file" name="file"/></td>
+    <td width="81" height="50" >&nbsp;</td>
+  </tr>
+    <th width="153" height="50" scope="row">
+      <h3>Product Name</h3>
+</th>
+    <td  width="252" height="50" ><input type="text" name="p_name" id="p_name" /></td>
+    <td  width="81" height="50" >&nbsp;</td>
+  </tr>
+  <tr>
+    <th width="153" height="50" scope="row">      <h3>Product Company</h3></th>
+    <td width="252" height="50" ><input type="text" name="p_company" id="p_company" /></td>
+    <td width="81" height="50" >&nbsp;</td>
+  </tr>
+  <tr>
+    <th width="153" height="50" scope="row">      <h3>Price</h3></th>
+    <td width="252" height="50" ><input type="text" name="p_price" id="p_price" /></td>
+    <td width="81" height="50" >&nbsp;</td>
+  </tr>
+  <tr>
+    <th width="153" height="50" scope="row">      <h3>Quantity</h3></th>
+    <td width="252" height="50" ><input type="text" name="p_quantity" id="p_quantity" /></td>
+    <td width="81" height="50" >&nbsp;</td>
+  </tr>
+   <tr>
+    <th width="153" height="50" scope="row">      <h3>Color</h3></th>
+    <td width="252" height="50" ><input type="text" name="p_color" id="p_color" /></td>
+    <td width="81" height="50" >&nbsp;</td>
+  </tr>
+             <td><input type="submit" name="addbutton" value="Add Item" /></td>
+  </tr>
+</table>
+</form>
+    </div> <!-- end of templatmeo_content -->
+
+
+
+
+   

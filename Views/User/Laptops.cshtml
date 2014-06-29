@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Laptops";
+    Layout = "~/Views/Shared/_LayoutLogout.cshtml";
+}
+@model NewViews.Models.Product
+   <div class="center_content">
+       
+         <h1> LAPTOPS</h1> 
+       @foreach (var product in ViewBag.product)
+       {
+           if (product.Product_Name.Equals("Laptop"))
+           {
+             <div class="prod_box">
+             <div class="top_prod_box"></div>
+              <div class="center_prod_box">            
+                 <div class="product_title"> @product.Product_Name</div>
+                 <div class="product_img"><img src="~/images/@product.Product_Image" alt="" title="" border="0" /></div>
+                 <div class="product_comapny"><p>Company :</p> @product.Product_Company</div> 
+                <div class="prod_price"><span class="reduce"></span> <span class="price"><h3>Price :</h3> @product.Product_Price</span></div>                        
+                 <div class="prod_quantity"><span class="reduce"></span><h3>Quantity :</h3> <span class="quantity">@product.Product_Quantity</span></div>                        
+                  <div class="prod_color"><span class="reduce"></span> <span class="color"> <h3>Color:</h3>@product.Product_Color</span></div>                        
+        </div>
+          
+            
+   </div>
+       }
+       }
+</div>
+   
+   	   
+

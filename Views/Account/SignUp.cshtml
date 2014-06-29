@@ -1,0 +1,51 @@
+@{
+    ViewBag.Title = "SignUp";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+@model NewViews.Models.User
+<div> 
+ <h2>Create new account</h2>
+       @using (Html.BeginForm("AddUser", "Account", FormMethod.Post))
+        {
+      <div align="center">
+          @Html.ValidationSummary(true)
+   <table width="500" border="0">
+     <tr>
+       <th width="153" height="50" scope="row">
+          @Html.ValidationMessageFor(m=>m.FirstName)
+         <h3 align="center"> @Html.LabelFor(m => m.FirstName)</h3></th>
+           <td  width="252" height="50" > @Html.TextBoxFor(m => m.FirstName, new { id="FirstName"}) </td>
+      <td  width="81" height="50" >&nbsp;</td>
+    </tr>
+       
+    <tr>       <th width="153" height="50" scope="row"> @Html.ValidationMessageFor(m=>m.LastName )     <h3>@Html.LabelFor(m => m.LastName)</h3></th> 
+           <td width="252" height="50" > @Html.TextBoxFor(m => m.LastName,new { id="LastName"})</td>
+      <td width="81" height="50" >&nbsp;</td>
+    </tr>
+        <tr>
+       <th width="153" height="50" scope="row">@Html.ValidationMessageFor(m=>m.Email) <h3>Email </h3></th> 
+            <td width="252" height="50" >@Html.TextBoxFor(m => m.Email,new { id="Email"})
+                </td>
+      
+          <tr>
+       <th width="153" height="50" scope="row">@Html.ValidationMessageFor(m=>m.Password)      <h3>Password</h3></th> 
+            <td width="252" height="50" >@Html.PasswordFor(m => m.Password,new { id="Password"})</td>
+      <td width="81" height="50" >&nbsp;</td></tr>
+        @*<tr>
+       <th width="153" height="50" scope="row">      <h3>Confirm Password</h3></th> 
+            <td width="252" height="50" ><input type="password" name="password2"></td>
+      <td width="81" height="50" >&nbsp;</td></tr>
+             <tr>*@
+       <tr>
+       <th width="153" height="50" scope="row">@Html.ValidationMessageFor(m=>m.Address)<h3>@Html.LabelFor(m => m.Address)</h3></th>
+            <td width="252" height="50" >@Html.TextBoxFor(m => m.Address)</td>
+      <td width="81" height="50" >&nbsp;</td></tr>
+       <tr>     
+       <td><input name="submit" type="submit"  value="Sign Up"/></td>   
+    </tr>
+   </table>
+     </div> 
+       }
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+    }
