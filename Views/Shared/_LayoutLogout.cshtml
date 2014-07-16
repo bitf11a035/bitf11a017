@@ -78,42 +78,18 @@
         
 
     </div>
-    
-   <div id="main_content"> 
-   
-            <div id="menu_tab">
-            <div class="left_menu_corner"></div>
-                    <ul class="menu">
-                         <li><a href="/User/Index" class="nav1 style4">  Home </a></li>
-                         <li class="divider"></li>
-                         <li><a href="/User/Index" class="nav2 style4">Products</a></li>
-                       
-                         <li><a href="/Account/Logout" class="nav7 style4">Logout</a></li>
-                         <li class="divider"></li>
-                    </ul>
-
-             <div class="right_menu_corner"></div>
-            </div><!-- end of menu tab -->
+   @RenderSection("tab",false) 
+  
             
-          
+       @RenderSection("left",false)   
     
     
-   <div class="left_content">
-    <div class="title_box">Categories</div>
-    
-        <ul class="left_menu">
-        <li class="even"><a href="/User/Laptops">Laptop</a></li>
-         <li class="odd"><a href="/User/WebCam">Webcam</a></li>
-         
-         <li class="even"><a href="/User/Mobile">Mobile Phones</a></li>
-        </ul> 
-        
         
      <div class="title_box">Special Products</div>  
      <div class="border_box">
          <div class="product_title"><a href="#">Motorola 156 MX-VL</a></div>
          <div class="product_img"><a href="#"><img src="~/images/laptop.png" alt="" title="" border="0" /></a></div>
-         <div class="prod_price"><span class="#">350$</span> <span class="price">270$</span></div>
+        
      </div>  
      
      
@@ -137,27 +113,16 @@
     
    
    </div><!-- end of center content -->
-   
-   <div class="right_content">
-   		<div class="shopping_cart">
-        	<div class="cart_title style5">Shopping cart</div>
-            
-            <div class="cart_details">
-            3 items <br />
-            <span class="border_cart"></span>
-            Total: <span class="price">350$</span>
-            </div>
-            
-            <div class="cart_icon"><a href="#" title="header=[Checkout] body=[&nbsp;] fade=[on]"><img src="~/images/shoppingcart.png" alt="" title="" width="48" height="48" border="0" /></a></div>
-        
-        </div>
+    @RenderSection("cartTab",false)
+
+  
    
    
      <div class="title_box">What’s new</div>  
      <div class="border_box">
          <div class="product_title"><a href="#">Motorola 156 MX-VL</a></div>
          <div class="product_img"><a href="#"><img src="~/images/p2.gif" alt="" title="" border="0" /></a></div>
-         <div class="prod_price"><span class="reduce">350$</span> <span class="price">270$</span></div>
+        
      </div>  
      
      
@@ -195,19 +160,12 @@
         </div>
         
         <div class="center_footer">
-        Template name. All Rights Reserved 2008<br />
+  EShop. All Rights Reserved 2014<br />
         <a href="http://csscreme.com/freecsstemplates/" title="free templates"><img src="~/images/csscreme.jpg" alt="free templates" title="free templates" border="0" /></a><br />
         <img src="~/images/payment.gif" alt="" title="" />
         </div>
         
-       @* <div class="right_footer">
-        <a href="index.html">home</a>
-        <a href="details.html">about</a>
-        <a href="details.html">sitemap</a>
-        <a href="details.html">rss</a>
-        <a href="contact.html">contact us</a>
-        </div>   *@
-   
+      
    </div>                 
 
 

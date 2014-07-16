@@ -2,6 +2,32 @@
     ViewBag.Title = "UpdateProduct";
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
+@section tab 
+{
+    <ul class="menu">
+                         <li><a href="/Admin/AdminHome" class="nav1 style4">  Home </a></li>
+                         <li class="divider"></li>
+                         <li><a href="/Admin/AddProduct" class="nav2 style4">Add Products</a></li>
+                         <li class="divider"></li>
+                         <li><a href="/Admin/Gallery" class="nav2 style4">Gallery</a></li>
+                         <li class="divider"></li>
+                         <li><a href="/Account/Logout" class="nav4 style4">Logout</a></li>
+                         <li class="divider"></li>
+                    </ul>
+
+             <div class="right_menu_corner"></div>
+
+}
+@section left
+{
+    <div class="left_content">
+    <div class="title_box">Selling Reports</div>
+    
+        <ul class="left_menu">
+        <li class="even"><a href="#">Today Report</a></li>
+         <li class="odd"><a href="#">Weekly Reports</a></li>
+        </ul> 
+}
  @model NewViews.Models.Product  
   <div>
   <h2>Update Product</h2>
@@ -52,7 +78,7 @@
 </table>
    	  }
       <div>
-    @Html.ActionLink("Back to MAin MEnu", "AdminHome")
+    <h2>@Html.ActionLink("Back to MAin MEnu", "AdminHome")</h2>
 </div>
     </div> <!-- end of templatmeo_content -->
 

@@ -2,7 +2,32 @@
     ViewBag.Title = "AddProduct";
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
+@section tab 
+{
+    <ul class="menu">
+                         <li><a href="/Admin/AdminHome" class="nav1 style4">  Home </a></li>
+                         <li class="divider"></li>
+                         <li><a href="/Admin/AddProduct" class="nav2 style4">Add Products</a></li>
+                         <li class="divider"></li>
+                         <li><a href="/Admin/Gallery" class="nav2 style4">Gallery</a></li>                        
+                         <li class="divider"></li>                         
+                         <li><a href="/Account/Logout" class="nav4 style4">Logout</a></li>
+                         <li class="divider"></li>
+                    </ul>
 
+             <div class="right_menu_corner"></div>
+
+}
+@section left
+{
+    <div class="left_content">
+    <div class="title_box">Selling Reports</div>
+    
+        <ul class="left_menu">
+        <li class="even"><a href="#">Today Report</a></li>
+         <li class="odd"><a href="#">Weekly Reports</a></li>
+        </ul> 
+}
 @model NewViews.Models.Product
 
       
@@ -19,9 +44,13 @@
     <td width="81" height="50" >&nbsp;</td>
   </tr>
     <th width="153" height="50" scope="row">
-      <h3>Product Name</h3>
+      <h3>Product Category</h3>
 </th>
-    <td  width="252" height="50" ><input type="text" name="p_name" id="p_name" /></td>
+    <td  width="252" height="50" ><select id="category" name="category">
+              <option  value="Laptop">Laptop</option>
+              <option  value="WebCam">WebCam</option>
+              <option  value="Mobile">Mobile</option>
+              </select></td>
     <td  width="81" height="50" >&nbsp;</td>
   </tr>
   <tr>

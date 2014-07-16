@@ -70,47 +70,21 @@
    
             <div id="menu_tab">
             <div class="left_menu_corner"></div>
-                    <ul class="menu">
-                         <li><a href="/Admin/AdminHome" class="nav1 style4">  Home </a></li>
-                         <li class="divider"></li>
-                         <li><a href="/Admin/AddProduct" class="nav2 style4">Add Products</a></li>
-                         <li class="divider"></li>
-                         
-                         <li class="divider"></li>
-                         
-                         <li class="divider"></li>
-                         @*<li><a href="/Account/SignUp" class="nav4 style4">Sign Up</a></li>*@
-                         <li class="divider"></li>                         
-                        @* <li><a href="/Home/About" class="nav5 style4">About </a></li>
-                         <li class="divider"></li>
-                         <li><a href="/Home/contact" class="nav6 style4">Contact Us</a></li>
-                         <li class="divider"></li>*@
-                         <li><a href="/Account/Logout" class="nav7 style4">Logout</a></li>
-                         <li class="divider"></li>
-                    </ul>
-
-             <div class="right_menu_corner"></div>
-            </div><!-- end of menu tab -->
+                @RenderSection("tab",false)
+                                </div><!-- end of menu tab -->
             
           
     
+@RenderSection("left",false)
     
-   <div class="left_content">
-    <div class="title_box">Selling Reports</div>
-    
-        <ul class="left_menu">
-        <li class="even"><a href="#">Today Report</a></li>
-         <li class="odd"><a href="#">Weekly Reports</a></li>
-         
-         @*<li class="even"><a href="services.html">Mobile Phones</a></li>*@
-        </ul> 
+  
         
         
      <div class="title_box">Special Products</div>  
      <div class="border_box">
          <div class="product_title"><a href="#">Motorola 156 MX-VL</a></div>
          <div class="product_img"><a href="#"><img src="~/images/laptop.png" alt="" title="" border="0" /></a></div>
-         <div class="prod_price"><span class="reduce">350$</span> <span class="price">270$</span></div>
+        
      </div>  
      
      
@@ -140,7 +114,7 @@
      <div class="border_box">
          <div class="product_title"><a href="#">Motorola 156 MX-VL</a></div>
          <div class="product_img"><a href="#"><img src="~/images/p2.gif" alt="" title="" border="0" /></a></div>
-         <div class="prod_price"><span class="reduce">350$</span> <span class="price">270$</span></div>
+         
      </div>  
      
      
@@ -178,7 +152,7 @@
         </div>
         
         <div class="center_footer">
-        Template name. All Rights Reserved 2008<br />
+        EShop. All Rights Reserved 2014<br />
         <a href="http://csscreme.com/freecsstemplates/" title="free templates"><img src="~/images/csscreme.jpg" alt="free templates" title="free templates" border="0" /></a><br />
         <img src="~/images/payment.gif" alt="" title="" />
         </div>

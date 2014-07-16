@@ -1,5 +1,4 @@
-﻿@{
-    ViewBag.Title = "Laptops";
+ @{ViewBag.Title = "CheckOut";
     Layout = "~/Views/Shared/_LayoutLogout.cshtml";
 }
 @section tab{
@@ -19,7 +18,7 @@
              <div class="right_menu_corner"></div>
             </div><!-- end of menu tab -->
     }
-    @section left
+      @section left
      {
          <div class="left_content">
     <div class="title_box">Categories</div>
@@ -32,32 +31,35 @@
         </ul> 
         
    
-     }                
-@model NewViews.Models.Product
-   <div class="center_content">
-       
-         <h1> LAPTOPS</h1> 
-       @foreach (var product in ViewBag.product)
-       {
-           if (product.Product_Name.Equals("Laptop"))
-           {
-             <div class="prod_box">
-             <div class="top_prod_box"></div>
-              <div class="center_prod_box">            
-                 <div class="product_title"> @product.Product_Name</div>
-                 <div class="product_img"><img src="~/images/@product.Product_Image" alt="" title="" border="0" /></div>
-                 <div class="product_comapny"><h3>Company </h3> @product.Product_Company</div> 
-                <div class="prod_price"><span class="reduce"></span> <span class="price"><h3>Price </h3> @product.Product_Price</span></div>                        
-                 <div class="prod_quantity"><span class="reduce"></span><h3>Quantity </h3> <span class="quantity">@product.Product_Quantity</span></div>                        
-                  <div class="prod_color"><span class="reduce"></span> <span class="color"> <h3>Color</h3>@product.Product_Color</span></div>                        
-        </div>
-          
-         &nbsp &nbsp &nbsp &nbsp<b>@Html.ActionLink("Back To Home", "Index")</b>    
-   </div>
-       }
-       }
-</div>
- @section cartTab{
+     }       
+
+            <div>              
+<h1>Place Your Order</h1>
+<form action="/User/DoneShopping" method="post">
+<table>
+<tr>
+    <th width="153" height="50" scope="row">      <h3>Email</h3></th>
+    <td  width="252" height="50" ><input type="text" name="email" id="email" /></td>
+    <td  width="81" height="50" >&nbsp;</td>
+  </tr>
+  <tr>
+    <th width="153" height="50" scope="row">      <h3>Shipping Address</h3></th>
+    <td width="252" height="50" ><input type="TextArea" name="address" id="address" /></td>
+    <td width="81" height="50" >&nbsp;</td>
+  </tr>
+  <tr>
+    <th width="153" height="50" scope="row">      <h3>Acoount No</h3></th>
+    <td width="252" height="50" ><input type="text" name="account" id="account" /></td>
+    <td width="81" height="50" >&nbsp;</td>
+  </tr>
+           
+ <td><input type="submit" name="done" value="Proceed" /></td>
+</table> 
+   
+    </form>
+    <h2>@Html.ActionLink("Back To Cart", "Index")</h2>
+<br />
+                 @section cartTab{
         <div class="right_content">
    		<div class="shopping_cart">
         	<div class="cart_title style5">Shopping cart</div>
@@ -74,6 +76,4 @@
         </div>
 }
 
-     
-   	   
-
+  
